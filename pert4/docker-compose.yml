@@ -4,7 +4,7 @@ services:
 
   dot_db:
     image: mariadb:10.2
-    container_name: mysql
+    container_name: mysql_dot
     restart: unless-stopped
     tty: true
     ports:

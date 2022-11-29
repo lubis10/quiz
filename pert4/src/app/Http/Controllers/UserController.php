@@ -16,7 +16,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $trans= DB::connection('mysql')->table('users')->get(); //cara laravel
+        //$trans= DB::connection('mysql')->table('users')->get(); //cara laravel
+        $trans = DB::select('call sp_office_getbycountry("USA")');
         return response()->json($trans);
     }
 
