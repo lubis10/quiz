@@ -1,0 +1,18 @@
+mongodb
+
+use quiz
+
+create collection:
+db.createCollection("mongodb")
+
+create all field:
+db.mongodb.insert({"id":"01","kategori":"android","merek":"realme","harga":"300000"}),({"id":"02","kategori":"android","merek":"xiaomi","harga":"500000"}),({"id":"03","kategori":"android","merek":"oddo","harga":"450000"})
+
+Read:
+db.mongodb.find({"merek":{$gt: "150000"}})
+
+Update: 
+db.mongodb.update({merek:"realme"}, {$set:{'merek':'samsung'}})
+
+DELETE: 
+db.mongodb.remove({'name':'samsung'})
